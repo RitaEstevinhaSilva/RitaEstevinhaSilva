@@ -15,7 +15,6 @@ tl.fromTo(".bottom", {opacity:0}, {opacity: 1, duration: 1} , "-=1");
 let mouseCursor = document.querySelector('#cursor');
 
 
-
 function cursor(e) {
     mouseCursor.style.top = e.pageY + 'px';
     mouseCursor.style.left = e.pageX + 'px';
@@ -27,8 +26,7 @@ window.addEventListener('mousemove', cursor);
 
 // CANVAS
 const canvas = document.querySelector('#drawCanvas');
-let colors = ['rgba(255,0,0,', 'rgba(255,255,0,', 'rgba(255,0,255,'];
-
+let colors = ['rgba(238,210,238,', 'rgba(255,255,0,', 'rgba(255,0,0,','rgba(0,0,255,','rgba(255,0,255,','rgba(0,255,255,'];
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -50,24 +48,15 @@ function finishPosition() {
 
 function draw(event) {
     let colorEnd = '';
-    let randomColors = Math.floor(Math.random() * 4); 
+    let randomColors = Math.floor(Math.random() * 6); 
     let randomAlpha = Math.random(1);
-    console.log(randomColors);
-    // if (randomColors < 0.5) {
-    //     colorEnd = colors[0];
-    // } else {
-    //     colorEnd = colors[1];
-    // }
+    //  console.log(randomColors);
     if (!painting) return;
     const left = event.clientX;
     const top = event.clientY;
     context.lineWidth = 20;
     context.lineCap = 'round';
     context.strokeStyle = colors[randomColors] + randomAlpha + ')';
-
-  //  context.strokeStyle = 'violet';
-    // context.strokeStyle = 'rgba(255,0,0,0.01)';
-
     context.lineTo(left, top);
     context.stroke();
     context.beginPath();
