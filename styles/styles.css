@@ -1,0 +1,183 @@
+@font-face {
+    font-family: Compagnon-Light;
+    src: url("Compagnon-Light.otf") format("opentype");
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    cursor:none; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(yellow,lightblue, violet );
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+} 
+
+#cursor{
+    width: 1rem;
+     height: 1rem;
+     border: 3px solid violet;
+     border-radius: 50%;
+     position:absolute;
+     transform: translate(-50%,-50%);
+     pointer-events: none;
+     z-index: 1;
+}
+.text{
+    font-family: alga, serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 105%;
+    padding-bottom:20px;
+    color: blue;
+
+}
+
+.pinyon{
+    font-family: 'Pinyon Script', cursive;
+    color: blue;
+    font-weight: 100;
+    font-size: 70px;
+    margin-left: 5px;
+    text-shadow: 2px 2px 5px violet;
+
+}
+.pinyon--link{
+ /* text-decoration: none; */
+    font-family: 'Pinyon Script', cursive;
+    font-weight: 100;
+    font-size: 20px;
+    color: blue;
+}
+
+a:hover{
+    color:blueviolet;
+}
+
+
+canvas{
+    width:100%;
+    
+}
+.scroll{
+    height:100vh;  
+    scroll-behavior: smooth;
+    position: absolute;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+}
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+#section--top{
+    position: absolute;
+    z-index: -1;
+    padding:20px;
+}
+
+.bottom{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:50px;
+    margin-bottom:20px;
+    padding:0px 20px 0px 20px;
+}
+
+.bottom--text{
+    font-family: Compagnon-Light;
+    font-weight: 100;
+    line-height: 110%;
+    font-size: 20px;
+    color: red;
+}
+
+.intro{
+    background: violet;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#section--about{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top:20px;
+}
+
+.section--about--written{
+    width:40vw;
+    padding: 20px 20px 20px 0px;
+}
+
+.written-text{
+    padding:5px;
+    color: blue;
+    font-family: alga,serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 110%;
+    letter-spacing: 0.7px;
+}
+
+#foto-rita{
+    height:550px;
+    width:auto;
+   padding:20px;
+  
+}
+.button-back{
+    padding:10px;
+    position:absolute;
+}
+#botao-voltar{
+   font-size:20px;
+    text-decoration: none;
+
+}
+
+.intro-text{
+    color: yellow;
+    font-family: 'Pinyon Script', cursive;
+    line-height: 110%;
+    font-weight: 100;
+    font-size: 80px;
+    text-shadow: 2px 2px 5px blue ;
+    padding: 20px;
+}
+
+.hide{
+    overflow: hidden;
+}
+
+.hide span{
+   transform: translateY(100%);
+   display: inline-block;
+}
+
