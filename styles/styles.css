@@ -3,7 +3,9 @@
     src: url("Compagnon-Light.otf") format("opentype");
 }
 
-
+body{
+    overflow-y: hidden;
+}
 *{
     padding:0;
     margin:0;
@@ -37,6 +39,27 @@ html{
      pointer-events: none;
      z-index: 1;
 }
+
+.scroll{
+    height:100vh;  
+    scroll-behavior: smooth;
+    position: absolute;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section{
+    height: 100vh;
+    
+    scroll-snap-align: start;
+}
+
+#section--top{
+    position: absolute;
+    z-index: -1;
+    padding:20px;
+}
+
 .text{
     font-family: alga, serif;
     font-weight: 300;
@@ -45,7 +68,6 @@ html{
     line-height: 105%;
     padding-bottom:20px;
     color: blue;
-
 }
 
 .pinyon{
@@ -69,28 +91,9 @@ a:hover{
     color:blueviolet;
 }
 
-
 canvas{
     width:100%;
     
-}
-.scroll{
-    height:100vh;  
-    scroll-behavior: smooth;
-    position: absolute;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-
-}
-section{
-    height: 100vh;
-    scroll-snap-align: start;
-}
-
-#section--top{
-    position: absolute;
-    z-index: -1;
-    padding:20px;
 }
 
 .bottom{
@@ -125,10 +128,31 @@ section{
 }
 
 #section--about{
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-   /* padding-top:20px;*/
+    justify-content: center; 
+}
+
+.section--about--written{
+    width:50vw;
+    padding: 20px;
+}
+
+#image{
+    margin-left: auto;
+    padding: 20px;
+}
+
+.written-text{
+    padding-bottom:5px;
+    padding-top:5px;
+    color: blue;
+    font-family: alga,serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 110%;
+    letter-spacing: 0.7px;
 }
 
 #about{
@@ -139,35 +163,23 @@ section{
     padding-top: 10px;
 }
 
-.section--about--written{
-    width:40vw;
-    padding: 20px;
-}
-
-.written-text{
-    padding:5px;
-    color: blue;
-    font-family: alga,serif;
-    font-size: 20px;
-    font-weight: 100;
-    line-height: 110%;
-    letter-spacing: 0.7px;
-}
-
 #foto-rita{
     height:600px;
     width:auto;
-   padding:20px;
-  
 }
+
+
 .button-back{
     padding:10px;
+    width:100%;
     position:absolute;
+    align-content: center;
+   text-align: center;
 }
+
 #botao-voltar{
    font-size:20px;
     text-decoration: none;
-
 }
 
 .intro-text{

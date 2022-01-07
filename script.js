@@ -26,7 +26,8 @@ window.addEventListener('mousemove', cursor);
 
 // CANVAS
 const canvas = document.querySelector('#drawCanvas');
-let colors = ['rgba(238,210,238,', 'rgba(255,255,0,', 'rgba(255,0,0,','rgba(0,0,255,','rgba(255,0,255,','rgba(0,255,255,'];
+// let colors = ['rgba(255,255,0,', 'rgba(255,0,0,','rgba(0,0,255,','rgba(255,0,255,','rgba(138,43,226,0,'];
+let colors = ['violet','yellow','blueviolet','lightskyblue','red'];
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -48,7 +49,7 @@ function finishPosition() {
 
 function draw(event) {
     let colorEnd = '';
-    let randomColors = Math.floor(Math.random() * 6); 
+    let randomColors = Math.floor(Math.random() * 5); 
     let randomAlpha = Math.random(1);
     //  console.log(randomColors);
     if (!painting) return;
@@ -56,7 +57,8 @@ function draw(event) {
     const top = event.clientY;
     context.lineWidth = 20;
     context.lineCap = 'round';
-    context.strokeStyle = colors[randomColors] + randomAlpha + ')';
+    context.strokeStyle = colors[randomColors];
+   // context.strokeStyle = colors[randomColors] + randomAlpha + ')';
     context.lineTo(left, top);
     context.stroke();
     context.beginPath();
