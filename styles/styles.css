@@ -126,9 +126,9 @@ section{
 
 #section--about{
     display: flex;
-   align-items: center;
-   justify-content: center;
-   padding-top:20px;
+    align-items: center;
+    justify-content: center;
+   /* padding-top:20px;*/
 }
 
 #about{
@@ -141,7 +141,7 @@ section{
 
 .section--about--written{
     width:40vw;
-    padding: 20px 20px 20px 0px;
+    padding: 20px;
 }
 
 .written-text{
@@ -155,7 +155,7 @@ section{
 }
 
 #foto-rita{
-    height:550px;
+    height:600px;
     width:auto;
    padding:20px;
   
